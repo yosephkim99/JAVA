@@ -33,10 +33,6 @@ public class userDAO {
     // 회원가입
     public int joinMember(User user){
         String SQL = "insert into user values(?, ?, ?)";
-//        String SQL = "insert into user values(";
-//        SQL += "'" + id + "', ";
-//        SQL += "'" + pw + "', ";
-//        SQL += "'" + name + "')";
         try {
             pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, user.getUserId());
